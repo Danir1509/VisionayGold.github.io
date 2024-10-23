@@ -59,8 +59,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #a28717;
 }
 .footer {
   position: absolute;
@@ -68,4 +69,22 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+  background-color: #b08e10;
 }
+
+.navbar {
+    background-color: #a28717; /* Elige el color que prefieras */
+}
+
+.navbar .navbar-brand {
+   color: black; /* Cambia el color del texto de la marca */
+}
+
+.nav-link:hover {
+    color: blanchedalmond; /* Color al pasar el puntero */
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
