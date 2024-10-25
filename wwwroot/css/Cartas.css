@@ -1,22 +1,49 @@
 ﻿
 /*-------------------------Letras de las card--------------------------------*/
+
+.titulocard {
+    color: black;
+    text-align: center;
+    margin-bottom: 2px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    backdrop-filter: blur(2px); /* Efecto de desenfoque detrás del texto */
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.descricard {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    backdrop-filter: blur(2px); /* Efecto de desenfoque detrás del texto */
+    padding: 8px;
+    border-radius: 8px;
+}
+
 .card .content{
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items:center;
     inset:0;
     padding: 2rem;
     transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 6rem);
     z-index: 4;
 }
 /*----------------Lineas de las card-------------------------*/
-.card::after, .card::before{
+.card::after, .card::before {
     content: " ";
     position: absolute;
     inset: 1.5rem;
     border: #a28717 0.5rem solid;
-    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 2rem)
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 2rem);
+    border-radius: 15px; /* Ajusta este valor según lo redondeado que desees */
+    overflow: hidden;
 }
 
 /*------------------ Card general------------------------*/
@@ -27,6 +54,8 @@
     margin: 0.5rem; /* Espaciado entre tarjetas */
     perspective: 1000px;
     transition: transform 0.2s;
+    border-radius: 15px; /* Ajusta este valor según lo redondeado que desees */
+    overflow: hidden; /* Asegura que el contenido no sobresalga de las esquinas redondeadas */
 }
 
 /*-----------------------Imagenes de las card-----------------------*/
