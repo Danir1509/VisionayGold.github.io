@@ -1,28 +1,42 @@
-﻿.container {
+﻿/*Todo el contenido de inicio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y los bordes no influyan en el tamaño del contenedor */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+.container {
     padding: 0;
     margin: 0;
     width: 100%;
+    max-width: 100%;
 }
 
-h1 {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
+/*----------------Letras dentro del contenido----------------------*/
+
+h5 {
+    font-family: "Anton", sans-serif;
+    font-weight: 200;
     letter-spacing: 2px;
-    font-size: 48px;
+    font-size: 24px;
 }
 /*---------------------------------- CONTENIDO ----------------------------------*/
-
+/*--------------- todo el contenido del video, cuerpo y olas--------------------*/
 .header {
     position: relative;
     text-align: center;
-    /*background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);*/
     color: white;
-    width: 100vw;
+    width: 100vw; /* Volvemos a usar 100vw para cubrir todo el viewport */
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-
+ /*---------------------Contenido del video----------------------------*/
 .inner-header {
     display: flex;
     justify-content: center;
@@ -93,18 +107,3 @@ h1 {
     z-index: -1; /* Coloca el video detrás del contenido */
 }
 
-.header {
-    position: relative;
-    overflow: hidden; /* Esto asegura que no haya desplazamiento no deseado */
-}
-
-.bg-video::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
-    z-index: 0;
-}

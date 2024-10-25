@@ -1,0 +1,61 @@
+﻿
+/*-------------------------Letras de las card--------------------------------*/
+.card .content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    inset:0;
+    padding: 2rem;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 6rem);
+    z-index: 4;
+}
+/*----------------Lineas de las card-------------------------*/
+.card::after, .card::before{
+    content: " ";
+    position: absolute;
+    inset: 1.5rem;
+    border: #a28717 0.5rem solid;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 2rem)
+}
+
+/*------------------ Card general------------------------*/
+.card {
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    margin: 0.5rem; /* Espaciado entre tarjetas */
+    perspective: 1000px;
+    transition: transform 0.2s;
+}
+
+/*-----------------------Imagenes de las card-----------------------*/
+
+.image {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 40%), var(--url);
+    background-size: cover;
+    background-position: center;
+    mask-image: var(--url);
+    mask-size: cover;
+    mask-position: center;
+    transform: translateZ(0);
+}
+
+
+/* --------------- Añadido para hacer que las tarjetas sean responsivas  ----------------*/
+@media (max-width: 768px) {
+    .card {
+        width: 15rem; /* Tamaño reducido para pantallas pequeñas */
+        height: 15rem;
+    }
+}
+
+/*----------------Los contenedores de las card-----------------*/
+.cards-container {
+    display: flex; /* Flexbox para alinear las tarjetas en fila */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la pantalla si es necesario */
+    gap: 2.5rem; /* Espacio entre las tarjetas */
+}

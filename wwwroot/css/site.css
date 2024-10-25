@@ -88,3 +88,10 @@ body {
     margin-left: auto;
 }
 
+.navbar-toggler-icon {
+    background-image: url('../Imagenes/logo.png'); /* Ruta correcta de tu imagen */
+    background-size: contain; /* Asegura que la imagen se ajuste dentro del botón */
+    background-repeat: no-repeat;
+    width: 30px; /* Ajusta el tamaño */
+    height: 30px; 
+}
