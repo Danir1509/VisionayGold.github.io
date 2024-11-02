@@ -98,6 +98,43 @@ body {
     height: 30px;
 }
 
+@media (max-width: 1000px) {
+    .navbar-collapse {
+        display: none !important; /* Oculta el menú por defecto */
+    }
+
+    .navbar-toggler {
+        display: block; /* Muestra el botón del menú */
+    }
+
+    .navbar-collapse.show {
+        display: block !important; /* Muestra el menú cuando está colapsado */
+    }
+}
+
+@media (min-width: 1000px) {
+    .navbar-collapse {
+        display: flex !important; /* Muestra el menú en pantallas más grandes */
+    }
+
+    .navbar-toggler {
+        display: none; /* Oculta el botón del menú en pantallas más grandes */
+    }
+}
+
+
+.barraletras {
+    color: #695604;
+    font-family: "Itim", cursive;
+    font-size: 22px;
+}
+
+.imageninicio {
+    background-size: contain; /* Asegura que la imagen se ajuste dentro del botón */
+    background-repeat: no-repeat;
+    width: 40px; /* Ajusta el tamaño */
+    height: 40px;
+}
 /*--------------------------Barra scroll--------------------------------*/
 
 /* Estilo del contenedor de la barra de desplazamiento */
