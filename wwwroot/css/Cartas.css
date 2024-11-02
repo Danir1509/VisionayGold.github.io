@@ -2,7 +2,7 @@
 /*-------------------------Letras de las card--------------------------------*/
 
 .titulocard {
-    color: black;
+    color: #fff219;
     text-align: center;
     margin-bottom: 2px;
     font-weight: bold;
@@ -12,17 +12,17 @@
     border-radius: 8px;
 }
 
-.descricard {
+/*.descricard {
     color: black;
     font-size: 20px;
     text-align: center;
     margin-top: 5px;
     font-weight: bold;
-    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-    backdrop-filter: blur(2px); /* Efecto de desenfoque detrás del texto */
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido 
+    backdrop-filter: blur(2px);  Efecto de desenfoque detrás del texto 
     padding: 8px;
     border-radius: 8px;
-}
+}*/
 
 .card .content{
     position: absolute;
@@ -56,6 +56,7 @@
     transition: transform 0.2s;
     border-radius: 15px; /* Ajusta este valor según lo redondeado que desees */
     overflow: hidden; /* Asegura que el contenido no sobresalga de las esquinas redondeadas */
+    margin-bottom: 0;
 }
 
 /*-----------------------Imagenes de las card-----------------------*/
@@ -76,8 +77,12 @@
 /* --------------- Añadido para hacer que las tarjetas sean responsivas  ----------------*/
 @media (max-width: 768px) {
     .card {
-        width: 15rem; /* Tamaño reducido para pantallas pequeñas */
-        height: 15rem;
+        width: 20rem; /* Tamaño reducido para pantallas pequeñas */
+        height: 20rem;
+    }
+
+    .text-center {
+        font-size: 20px;
     }
 }
 
@@ -87,4 +92,25 @@
     justify-content: center; /* Centra las tarjetas horizontalmente */
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la pantalla si es necesario */
     gap: 2.5rem; /* Espacio entre las tarjetas */
+}
+
+
+/*------------------------Descripciones de las card-----------------------------------*/
+.descricard {
+    color: #695604;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    backdrop-filter: blur(2px); /*Efecto de desenfoque detrás del texto*/
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem; /* Igual al ancho de la tarjeta */
 }

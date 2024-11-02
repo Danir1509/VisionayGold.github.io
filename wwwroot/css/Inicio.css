@@ -6,6 +6,7 @@
 }
 
 html, body {
+    padding-top: 30px;
     width: 100%;
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
@@ -18,12 +19,43 @@ html, body {
 }
 
 /*----------------Letras dentro del contenido----------------------*/
+.descricard {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 26px !important;
+}
+.Descripcionini {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    color: #695604;
+    text-align: justify; /* Justifica el texto */
+    text-align-last: center; /* Centra la última línea */
+    margin: 0 auto; /* Centra el contenedor si tiene un ancho específico */
+    max-width: 90%;
+}
 
-h5 {
+h2 {
     font-family: "Anton", sans-serif;
     font-weight: 200;
     letter-spacing: 2px;
-    font-size: 24px;
+    font-size: 34px;
+}
+
+
+h5 {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+}
+
+h3 {
+    font-family: "Anton", sans-serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align:center;
 }
 /*---------------------------------- CONTENIDO ----------------------------------*/
 /*--------------- todo el contenido del video, cuerpo y olas--------------------*/
@@ -107,3 +139,49 @@ h5 {
     z-index: -1; /* Coloca el video detrás del contenido */
 }
 
+/*-------------------------------Galeria de fotos--------------------------------------------*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Espacio entre imágenes */
+    padding: 20px;
+    
+}
+
+.gallery img {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 250px; /* Tamaño máximo de cada imagen */
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Cuando el cursor está sobre la imagen */
+.gallery img:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Agrandar ligeramente la imagen */
+}
+
+section {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .gallery img {
+
+        max-width: 200px; /* Tamaño máximo de cada imagen */
+
+    }
+
+    h5 {
+        font-family: "Itim", cursive;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        font-size: 33px;
+    }
+}
