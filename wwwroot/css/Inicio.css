@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Asegura que el padding y los bordes no influyan en el tamaño del contenedor */
+    touch-action: none;
 }
 
 html, body {
@@ -57,6 +58,53 @@ h3 {
     font-size: 20px;
     text-align:center;
 }
+
+.text-footer {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    text-align: justify;
+    color: #ecdf06
+}
+
+.text-footer3 {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    text-align: center;
+    color: #dcc355;
+    text-decoration: none; /* Quita la línea debajo del enlace */
+    transition: color 0.3s; /* Efecto de transición */
+}
+.text-footer3:hover {
+    color: #b2951b; /* Cambia el color al pasar el mouse */
+    text-decoration: underline; /* Puedes añadir esta línea si deseas un subrayado al pasar el mouse */
+}
+
+.text-footer4 {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    text-align: center;
+    color: #dcc355;
+    text-decoration: none; /* Quita la línea debajo del enlace */
+    transition: color 0.3s; /* Efecto de transición */
+}
+
+
+.text-footer2 {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    text-align: center;
+    color: #ecdf06
+}
+
+
 /*---------------------------------- CONTENIDO ----------------------------------*/
 /*--------------- todo el contenido del video, cuerpo y olas--------------------*/
 .header {
@@ -68,17 +116,7 @@ h3 {
     padding: 0;
     overflow: hidden;
 }
- /*---------------------Contenido del video----------------------------*/
-.inner-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 55vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+
 
 /*----------------------------------  OLAS ----------------------------------*/
 
@@ -138,6 +176,17 @@ h3 {
     object-fit: cover; /* Esto asegura que el video cubra todo el área */
     z-index: -1; /* Coloca el video detrás del contenido */
 }
+/*---------------------Contenido del video----------------------------*/
+.inner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 55vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 /*-------------------------------Galeria de fotos--------------------------------------------*/
 .gallery {
@@ -170,7 +219,32 @@ section {
     justify-content: center;
 }
 
+/*----------------------------Video de la pagina en inicio -------------------------------------*/
+.video-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente (opcional) */
+    margin: 20px auto; /* Añade un margen superior e inferior */
+    max-width: 800px; /* Establece un ancho máximo para el video */
+    width: 100%; /* Permite que el contenedor sea responsivo */
+    border-radius: 20px; /* Esquinas redondeadas */
+    overflow: hidden; /* Asegura que el contenido no sobresalga de las esquinas redondeadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+}
 
+.video-container:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.responsive-video {
+    width: 100%; /* El video ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    border-radius: 20px; /* Asegura que el video también tenga esquinas redondeadas */
+}
+
+
+/*------------------------------Responsive del contenido-------------------------------*/
 @media (max-width: 768px) {
     .gallery img {
 
@@ -189,4 +263,52 @@ section {
         font-size: 26px;
 
     }
+}
+
+@media (max-width: 500px) {
+    .inner-header {
+        height: 65vh; /* Aumenta la altura solo para pantallas pequeñas */
+    }
+
+        .inner-header .text-center {
+            margin-top: 100px !important; /* Ajusta según el desplazamiento que necesites */
+        }
+}
+
+/*------------------footer---------------------------*/
+
+
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: #786207 ; /* Cambia a tu color preferido para el footer */
+   
+    color: white; /* Cambia el color de texto si es necesario */
+    text-align: center;
+    position: relative;
+}
+
+.btn-floating {
+    background-color: #bea22d; /* Color amarillo */
+    border: none;
+}
+
+.btn-floating:hover {
+    background-color: #d7b839; /* Un tono más oscuro de amarillo para hover */
+    border: none;
+}
+
+.rounded-circle {
+    background-color: #bea22d; /* Color amarillo para el fondo del círculo */
+}
+
+
+.table {
+    border-collapse: collapse; /* Para que las líneas se muestren correctamente */
+}
+
+.table th, .table td {
+    border: 1px solid #b2951b; /* Cambia este color al que prefieras */
 }
